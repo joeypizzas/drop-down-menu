@@ -4,6 +4,10 @@
   --normal: #fcfcfc;
   --hover: #f5f5f5;
   --click: #eaeaea;
+  --text: #333333;
+  --text-hover: #111111;
+  --text-click: #555555;
+  --border: #dddddd;
 }
 
 html,
@@ -23,10 +27,11 @@ body {
     sans-serif;
 }
 
-.body-container {
+.dropdown-container {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--click);
@@ -36,5 +41,15 @@ body {
   width: 10rem;
   height: 3rem;
   background-color: var(--normal);
-  border-radius: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.dropdown-child {
+  visibility: hidden;
 }
