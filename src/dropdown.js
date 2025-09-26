@@ -15,10 +15,18 @@ export function initDropdownListeners() {
     });
   });
   dropdownParents.forEach((parent) => {
+    const dropdownList = parent.closest(".dropdown-list");
+    const dropdownChildren = dropdownList.querySelectorAll(".dropdown-child");
     parent.addEventListener("mouseover", () => {
-      const dropdownContainer = parent.closest(".dropdown-container");
-      const dropdownChildren =
-        dropdownContainer.querySelectorAll(".dropdown-child");
+      dropdownChildren.forEach((child) => {
+        child.classList.add("shown");
+      });
+    });
+    dropdownList.addEventListener("mouseout", () => {
+      // start here
+      dropdownChildren.forEach((child) => {
+        child.classList.remove("shown");
+      });
     });
   });
 }
