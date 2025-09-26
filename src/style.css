@@ -31,10 +31,14 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--click);
+}
+
+.dropdown-list {
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdown-item {
@@ -52,4 +56,8 @@ body {
 
 .dropdown-child {
   visibility: hidden;
+}
+
+.shown {
+  visibility: visible;
 }
