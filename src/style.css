@@ -7,7 +7,6 @@
   --text: #333333;
   --text-hover: #111111;
   --text-click: #555555;
-  --border: #dddddd;
 }
 
 html,
@@ -46,7 +45,6 @@ body {
   height: 3rem;
   background-color: var(--normal);
   border-radius: 3px;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +54,7 @@ body {
 
 .dropdown-child {
   visibility: hidden;
+  cursor: pointer;
 }
 
 .shown {
